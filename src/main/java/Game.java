@@ -1,8 +1,8 @@
 public class Game {
+    private static int counter = 0;
     private final String serialNumber;
     private double price;
     private GameSpec spec;
-    static private int counter = 0;
 
     public Game(double price, GameSpec spec) {
         this.price = price;

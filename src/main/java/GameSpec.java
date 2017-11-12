@@ -9,6 +9,24 @@ public class GameSpec {
     private List<Genre> genres = new ArrayList<>();
     private List<Language> languages = new ArrayList<>();
 
+    public GameSpec(String name, String description, Integer ageRestrictions, Genre[] genres, Language[] languages) {
+        if (name != null) {
+            this.name = name;
+        }
+        if (description != null) {
+            this.description = description;
+        }
+        if (ageRestrictions != null) {
+            this.ageRestrictions = ageRestrictions;
+        }
+        if (genres != null) {
+            this.genres = Arrays.asList(genres);
+        }
+        if (languages != null) {
+            this.languages = Arrays.asList(languages);
+        }
+    }
+
     public boolean matches(GameSpec spec) {
         if (spec.getName() != null && !name.toLowerCase().contains(spec.getName().toLowerCase())) {
             return false;
@@ -36,24 +54,6 @@ public class GameSpec {
 
         }
         return true;
-    }
-
-    public GameSpec(String name, String description, Integer ageRestrictions, Genre[] genres, Language[] languages) {
-        if (name != null) {
-            this.name = name;
-        }
-        if (description != null) {
-            this.description = description;
-        }
-        if (ageRestrictions != null) {
-            this.ageRestrictions = ageRestrictions;
-        }
-        if (genres != null) {
-            this.genres = Arrays.asList(genres);
-        }
-        if (languages != null) {
-            this.languages = Arrays.asList(languages);
-        }
     }
 
     public String getName() {
