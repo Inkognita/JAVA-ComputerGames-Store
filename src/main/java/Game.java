@@ -2,11 +2,11 @@ public class Game {
     private final String serialNumber;
     private double price;
     private GameSpec spec;
-    private static Integer counter = 0;
+    static private int counter = 0;
 
-    public Game(double price, GameSpec spec){
+    public Game(double price, GameSpec spec) {
         this.price = price;
-        this.serialNumber = Game.counter.toString();
+        this.serialNumber = Integer.toString(Game.counter);
         Game.counter++;
         this.spec = spec;
     }

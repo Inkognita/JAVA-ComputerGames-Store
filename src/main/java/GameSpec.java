@@ -13,7 +13,8 @@ public class GameSpec {
         if (spec.getName() != null && !name.toLowerCase().contains(spec.getName().toLowerCase())) {
             return false;
         }
-        if (spec.getDescription() != null && !description.toLowerCase().contains(spec.getDescription().toLowerCase())) {
+        if (spec.getDescription() != null &&
+                !description.toLowerCase().contains(spec.getDescription().toLowerCase())) {
             return false;
         }
         if (spec.getAgeRestrictions() != null && spec.getAgeRestrictions() < ageRestrictions) {

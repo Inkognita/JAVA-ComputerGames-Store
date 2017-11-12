@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TestComputerGameStore {
     @Test
-    public void addingSingleGameTest(){
+    public void addingSingleGameTest() {
         ComputerGameStore store = new ComputerGameStore();
         GameSpec spec;
         spec = new GameSpec("CS:GO", "Made in 2012",
@@ -22,8 +22,9 @@ public class TestComputerGameStore {
         assertTrue(createdGame.getSpec().getGenres().contains(Genre.ACTION));
         assertFalse(createdGame.getSpec().getGenres().contains(Genre.SIMULATION));
     }
+
     @Test
-    public void addingMultipleGamesTest(){
+    public void addingMultipleGamesTest() {
         ComputerGameStore store = new ComputerGameStore();
         GameSpec spec;
         spec = new GameSpec("CS:GO", "Made in 2012",
