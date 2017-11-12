@@ -22,4 +22,22 @@ public class TestComputerGameStore {
         assertTrue(createdGame.getSpec().getGenres().contains(Genre.ACTION));
         assertFalse(createdGame.getSpec().getGenres().contains(Genre.SIMULATION));
     }
+    @Test
+    public void addingMultipleGamesTest(){
+        ComputerGameStore store = new ComputerGameStore();
+        GameSpec spec;
+        spec = new GameSpec("CS:GO", "Made in 2012",
+                null, new Genre[]{Genre.ACTION, Genre.STRATEGY},
+                new Language[]{Language.ENGLISH});
+        Game createdGame1 = store.addGame(5.6, spec);
+        spec = new GameSpec("CS:G", "Made in 20",
+                18, new Genre[]{Genre.SIMULATION, Genre.STRATEGY},
+                new Language[]{Language.ENGLISH, Language.UKRAINIAN});
+        Game createdGame2 = store.addGame(8, spec);
+        spec = new GameSpec("CS", "Made",
+                255, new Genre[]{Genre.STRATEGY}, null);
+        assertTrue(store.search(spec).contains(createdGame1));
+        assertTrue(store.search(spec).contains(createdGame2));
+        assertEquals(createdGame2, store.get("1"));
+    }
 }
