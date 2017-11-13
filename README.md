@@ -1,3 +1,3 @@
 # JAVA-ComputerGames-Store
 HomeWork CS@UCU
-OOPD&A Example of Computer Games Store
+OOD&A Example of Computer Games Store
