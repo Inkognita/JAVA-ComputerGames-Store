@@ -12,7 +12,7 @@ public class ComputerGameStore {
 
     public Game addGame(double price, GameSpec spec) {
         Game game = new Game(price, spec);
-        //inventory.add(game);
+        inventory.add(game);
         return game;
     }
 
@@ -29,7 +29,7 @@ public class ComputerGameStore {
         List<Game> matchedGames = new ArrayList<>();
         for (Game game : inventory) {
             if (game.getSpec().matches(spec)) {
-                //matchedGames.add(game);
+                matchedGames.add(game);
             }
         }
         return matchedGames;
