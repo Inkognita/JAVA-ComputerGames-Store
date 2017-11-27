@@ -1,3 +1,5 @@
+package store;
+
 public enum Genre {
     ACTION, ACTION_ADVENTURE, ADVENTURE, ROLE_PLAYING,
     SIMULATION, STRATEGY, SPORTS;

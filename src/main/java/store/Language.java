@@ -1,3 +1,5 @@
+package store;
+
 public enum Language {
     UKRAINIAN, ENGLISH, RUSSIAN, POLAND, CHINESE;
 

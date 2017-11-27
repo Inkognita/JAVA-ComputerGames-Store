@@ -1,3 +1,5 @@
+package store;
+
 public class Game {
     private static int counter = 0;
     private final String serialNumber;

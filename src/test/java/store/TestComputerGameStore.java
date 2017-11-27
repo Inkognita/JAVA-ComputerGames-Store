@@ -1,3 +1,5 @@
+package store;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -14,7 +16,7 @@ public class TestComputerGameStore {
         spec = new GameSpec("CS:GO", "Made in 2012",
                 null, new Genre[]{Genre.ACTION, Genre.STRATEGY},
                 new Language[]{Language.ENGLISH});
-        Game createdGame = store.addGame(5.6, spec);
+         Game createdGame = store.addGame(5.6, spec);
         List<Game> foundGames = store.search(spec);
         assertTrue(foundGames.contains(createdGame));
         assertEquals(5.6, createdGame.getPrice(), 0.1);
