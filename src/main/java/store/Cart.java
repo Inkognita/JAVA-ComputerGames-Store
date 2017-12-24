@@ -9,12 +9,14 @@ public class Cart extends Observable implements CartInterface {
     private DeliveryStrategy deliveryStrategy;
     public Cart(){
         games = new ArrayList<>();
+        paymentStrategy = new Privat24Payment();
+        deliveryStrategy = new DeliveryNovaPoshta();
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(String msg) {
         for (Observer observer : observers) {
-            observer.update("Something went wrong");
+            observer.update(msg);
         }
     }
 

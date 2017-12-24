@@ -1,7 +1,7 @@
 package store;
 
 public class BonusDecorator extends CartDecorator {
-    public BonusDecorator(Cart cart){
+    public BonusDecorator(CartInterface cart){
         super(cart);
     }
     @Override

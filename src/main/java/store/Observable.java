@@ -22,5 +22,5 @@ public abstract class Observable {
         return observers;
     }
 
-    public abstract void notifyObservers();
+    public abstract void notifyObservers(String msg);
 }
